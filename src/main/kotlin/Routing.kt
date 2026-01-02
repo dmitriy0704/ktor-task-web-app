@@ -9,7 +9,10 @@ import io.ktor.server.thymeleaf.ThymeleafContent
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
 
 fun Application.configureRouting() {
+
     routing {
+        staticResources("/static", "static")
+
         get("/") {
             call.respondText("Hello World!")
         }
